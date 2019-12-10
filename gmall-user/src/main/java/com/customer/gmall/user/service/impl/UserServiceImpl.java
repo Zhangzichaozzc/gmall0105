@@ -5,11 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.customer.gmall.user.bean.UmsMember;
-import com.customer.gmall.user.bean.UmsMemberReceiveAddress;
+import com.customer.gmall.bean.UmsMember;
+import com.customer.gmall.bean.UmsMemberReceiveAddress;
+import com.customer.gmall.service.UserService;
 import com.customer.gmall.user.mapper.UmsMemberReceiveAddressMapper;
 import com.customer.gmall.user.mapper.UserMapper;
-import com.customer.gmall.user.service.UserService;
+
+import tk.mybatis.mapper.entity.Example;
 
 /**
  * UserServiceImpl
@@ -35,8 +37,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UmsMemberReceiveAddress> getReceiveAddresseByMemberId(String memberId) {
-        UmsMemberReceiveAddress umsMemberReceiveAddress = new UmsMemberReceiveAddress();
-        umsMemberReceiveAddress.setMemberId(memberId);
-        return umsMemberReceiveAddressMapper.select(umsMemberReceiveAddress);
+//        UmsMemberReceiveAddress umsMemberReceiveAddress = new UmsMemberReceiveAddress();
+//        umsMemberReceiveAddress.setMemberId(memberId);
+//        return umsMemberReceiveAddressMapper.select(umsMemberReceiveAddress);
+        Example example = new Example(UmsMemberReceiveAddress.class);
+        example.createCriteria().andEqualTo("memberId", memberId);
+        return umsMemberReceiveAddressMapper.selectByExample(example);
     }
 }

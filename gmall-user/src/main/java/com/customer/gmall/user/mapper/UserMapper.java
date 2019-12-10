@@ -1,8 +1,9 @@
 package com.customer.gmall.user.mapper;
 
+
 import java.util.List;
 
-import com.customer.gmall.user.bean.UmsMember;
+import com.customer.gmall.bean.UmsMember;
 
 import tk.mybatis.mapper.common.Mapper;
 

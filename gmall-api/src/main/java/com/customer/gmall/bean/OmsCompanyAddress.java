@@ -1,17 +1,18 @@
-package com.customer.gmall.user.bean;
+package com.customer.gmall.bean;
 
 import javax.persistence.Id;
+
 import java.io.Serializable;
 
-public class UmsMemberReceiveAddress implements Serializable {
+public class OmsCompanyAddress implements Serializable {
 
     @Id
     private String id;
-    private String memberId;
-    private String  name;
-    private String  phoneNumber;
-    private int defaultStatus;
-    private String postCode;
+    private String addressName;
+    private int sendStatus;
+    private int receiveStatus;
+    private String name;
+    private String phone;
     private String province;
     private String city;
     private String region;
@@ -25,12 +26,28 @@ public class UmsMemberReceiveAddress implements Serializable {
         this.id = id;
     }
 
-    public String getMemberId() {
-        return memberId;
+    public String getAddressName() {
+        return addressName;
     }
 
-    public void setMemberId(String memberId) {
-        this.memberId = memberId;
+    public void setAddressName(String addressName) {
+        this.addressName = addressName;
+    }
+
+    public int getSendStatus() {
+        return sendStatus;
+    }
+
+    public void setSendStatus(int sendStatus) {
+        this.sendStatus = sendStatus;
+    }
+
+    public int getReceiveStatus() {
+        return receiveStatus;
+    }
+
+    public void setReceiveStatus(int receiveStatus) {
+        this.receiveStatus = receiveStatus;
     }
 
     public String getName() {
@@ -41,28 +58,12 @@ public class UmsMemberReceiveAddress implements Serializable {
         this.name = name;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public int getDefaultStatus() {
-        return defaultStatus;
-    }
-
-    public void setDefaultStatus(int defaultStatus) {
-        this.defaultStatus = defaultStatus;
-    }
-
-    public String getPostCode() {
-        return postCode;
-    }
-
-    public void setPostCode(String postCode) {
-        this.postCode = postCode;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getProvince() {

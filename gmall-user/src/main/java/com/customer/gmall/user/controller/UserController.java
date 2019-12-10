@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.customer.gmall.user.bean.UmsMember;
-import com.customer.gmall.user.bean.UmsMemberReceiveAddress;
-import com.customer.gmall.user.service.UserService;
+import com.customer.gmall.bean.UmsMember;
+import com.customer.gmall.bean.UmsMemberReceiveAddress;
+import com.customer.gmall.service.UserService;
+
 
 /**
  * UserController

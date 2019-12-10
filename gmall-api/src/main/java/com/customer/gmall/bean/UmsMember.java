@@ -1,4 +1,4 @@
-package com.customer.gmall.user.bean;
+package com.customer.gmall.bean;
 
 import javax.persistence.Id;
 
