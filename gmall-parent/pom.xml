@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.10.RELEASE</version>
+        <version>1.5.21.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -22,6 +22,8 @@
         <module>../gmall-common-util</module>
         <module>../gmall-service-util</module>
         <module>../gmall-web-util</module>
+        <module>../gmall-user-service</module>
+        <module>../gmall-user-web</module>
     </modules>
 
     <properties>
